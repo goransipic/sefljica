@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="row">
+        <div  class="col pt-4 pb-4" align="center">
+        <firebase-ui (signInSuccessWithAuthResult)="successCallback($event)" 
+        (signInFailure)="errorCallback($event)">></firebase-ui>
+        </div>
+    </div>
+    <div *ngIf="userName">
+        <div class="row">
+            <div  class="col pt-4 pb-4" align="center">
+                <p  class="font-weight-bold">Dobro došao!!!</p>
+              <p>{{userName}}</p>
+            </div>
+        </div>
+        </div>
+<div class="row">
+      <div  class="col pt-4 pb-4" align="center">
+      <button type="button" class="btn btn-primary  btn-lg" routerLink="/menu" (click)="goBack()">Return to menu</button>
+      </div>
+  
+</div>
+  </div>
+  
+
+
